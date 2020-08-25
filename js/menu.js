@@ -24,26 +24,50 @@ $(function() {
   });
 });
 
+<!-- スクロール用 -->
+    $(function(){
+    var topBtn=$('#pagetop');
+    topBtn.hide();
 
-$(document).ready(function() {
- 
-  let $pagetop = $('.scrollTop');
+    //ボタンの表示設定
+    $(window).scroll(function(){
+        if($(this).scrollTop()>800){
+            //---- 画面を800pxスクロールしたら、ボタンを表示する
+            topBtn.fadeIn();
+        }else{
+            //---- 画面が800pxより上なら、ボタンを表示しない
+            topBtn.fadeOut();
+        } 
+    });
 
-  $(window).on( 'scroll', function () {
-      //スクロール位置を取得
-      if ( $(this).scrollTop() < 40 ) {
-          $pagetop.removeClass('isActive');
-      } else {
-          $pagetop.addClass('isActive');
-      }
-  });
-
-  //ページ内リンクスムーススクロール
-  $('a[href="#"]').on('click', function () {
-      var href = $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      $("html, body").animate({scrollTop: position}, 550, "swing");
-      return false;
-  });
+    //ボタンをクリックしたら、スクロールして上に戻る
+    topBtn.click(function(){
+        $('body,html').animate({
+            scrollTop: 0},500);
+        return false;
+    });
 });
+
+
+//$(document).ready(function() {
+// 
+//  let $pagetop = $('.scrollTop');
+//
+//  $(window).on( 'scroll', function () {
+//      //スクロール位置を取得
+//      if ( $(this).scrollTop() < 40 ) {
+//          $pagetop.removeClass('isActive');
+//      } else {
+//          $pagetop.addClass('isActive');
+//      }
+//  });
+//
+//  //ページ内リンクスムーススクロール
+//  $('a[href="#"]').on('click', function () {
+//      var href = $(this).attr("href");
+//      var target = $(href == "#" || href == "" ? 'html' : href);
+//      var position = target.offset().top;
+//      $("html, body").animate({scrollTop: position}, 550, "swing");
+//      return false;
+//  });
+//});

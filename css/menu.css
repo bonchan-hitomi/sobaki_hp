@@ -390,6 +390,19 @@ img:hover {
     padding-left: 15px;
 }
 
+
+/* pagetop */
+#pagetop{
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    z-index: 10;
+    width: 80px;
+}
+
+/*
+
 .scrollTop {
     position: fixed;
     right: 20px;
@@ -418,3 +431,4 @@ img:hover {
 .scrollTop a:hover {
     background: #7eb386;
 }
+*/
