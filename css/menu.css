@@ -398,37 +398,9 @@ img:hover {
     bottom:10px;
     cursor:pointer;
     z-index: 10;
-    width: 80px;
-}
-
-/*
-
-.scrollTop {
-    position: fixed;
-    right: 20px;
-    bottom: 30px;
-    transition: all 0.4s ease-in-out 0s;
-    opacity: 0;
-}
-
-.scrollTop.isActive {
-    position: fixed;
-    right: 20px;
-    bottom: 30px;
-    opacity: 1;
-    transition: all 0.4s ease-in-out 0s;
+    width: 100px;
 }
 
 
-.scrollTop a {
-    font-size: 20px;
-    color: #fff;
-    background: #6ead70;
-    padding: 20px;
-    border-radius: 5px;
-}
 
-.scrollTop a:hover {
-    background: #7eb386;
-}
-*/
+
