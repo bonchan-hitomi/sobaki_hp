@@ -20,20 +20,6 @@ $(function(){
   }, switchDelay);
 });
 
-
-$(function(){
-  $(window).scroll(function (){
-    $('.okan-kotoba').each(function(){
-      var elemPos = $(this).offset().top;
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-        if (scroll > elemPos - windowHeight + 150){
-        $(this).addClass('scrollin');
-      }
-    });
-  });
-});
-
 $(function(){
     $(window).scroll(function (){
         $('.okan').each(function(){
