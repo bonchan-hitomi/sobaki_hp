@@ -27,7 +27,7 @@ $(function(){
       var elemPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-        if (scroll > elemPos - windowHeight + 200){
+        if (scroll > elemPos - windowHeight + 150){
         $(this).addClass('scrollin');
       }
     });
@@ -36,11 +36,11 @@ $(function(){
 
 $(function(){
     $(window).scroll(function (){
-        $('.okan2').each(function(){
+        $('.okan').each(function(){
             var elemPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight + 200){
+            if (scroll > elemPos - windowHeight + 100){
                 $(this).addClass('scrollin');
             }
         });
